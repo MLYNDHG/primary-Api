@@ -64,6 +64,7 @@ namespace RayPI.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            ////////
         }
     }
 }
