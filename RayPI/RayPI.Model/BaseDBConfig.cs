@@ -12,6 +12,7 @@ namespace RayPI.Model
         /// <summary>
         /// 数据库连接字符串
         /// </summary>
-        public static string ConnectionString = "Provider=SQLOLEDB.1;Password=PS123321;Persist Security Info=True;User ID=sa;Initial Catalog=NetCoreApiDB;Data Source=.";
+        //public static string ConnectionString = "Provider=SQLOLEDB.1;Password=PS123321;Persist Security Info=True;User ID=sa;Initial Catalog=NetCoreApiDB;Data Source=.";
+          public static string ConnectionString = "server=.;uid=sa;pwd=PS123321;database=NetCoreApiDB";
     }
 }
