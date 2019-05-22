@@ -68,14 +68,15 @@ namespace RayPI.Controllers.Admin
         /// <summary>
         /// 删除学生
         /// </summary>
-        /// <param name="ids"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete]
-        public JsonResult Dels(dynamic[] ids = null)
+        public JsonResult Del(long id = 0)
         {
-            if (ids.Length == 0)
+            if (id == 0) {
                 return Json("参数为空");
-            return Json(bll.DelMore(ids));
+            }
+            return Json(bll.Delete(id));
         }
         #endregion
     }

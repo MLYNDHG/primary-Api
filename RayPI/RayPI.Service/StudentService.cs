@@ -13,8 +13,7 @@ namespace RayPI.Service
         public SimpleClient<Student> sdb = new SimpleClient<Student>(BaseDB.GetClient());
         public bool Add(Student student)
         {
-            bool b= sdb.Insert(student); 
-            return b;
+            return sdb.Insert(student);
         }
 
         public bool Delete(long id)
@@ -24,7 +23,8 @@ namespace RayPI.Service
 
         public bool DelMore(dynamic[] id)
         {
-            return sdb.DeleteByIds(id);
+            bool b = sdb.DeleteByIds(id);
+            return b;
         }
 
         public Student Get(long id)
