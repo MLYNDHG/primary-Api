@@ -52,12 +52,14 @@ namespace RayPI
                     Contact=new Swashbuckle.AspNetCore.Swagger.Contact {
                         Name="路西菲尔",Email="2674268221@qq.com",Url="http://www.cnblogs.con/RayWang"
                     }
-                });
+                });               
 
                 //添加服务注释
                 var basePath = PlatformServices.Default.Application.ApplicationBasePath;
                 var xmlPath = Path.Combine(basePath,"APIHelp.xml");
+                var Entity = Path.Combine(basePath, "RayPI.Entity.xml");
                 c.IncludeXmlComments(xmlPath,true);
+                c.IncludeXmlComments(Entity, true);
                 //c.DocumentFilter<SwaggerDocTag>();
 
 

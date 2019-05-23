@@ -2,6 +2,9 @@
 
 namespace RayPI.Entity
 {
+    /// <summary>
+    /// 学生类
+    /// </summary>
     public class Student
     {
         /// <summary>
