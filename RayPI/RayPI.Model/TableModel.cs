@@ -9,6 +9,7 @@ namespace RayPI.Model
     /// 我理解为工具类的作用
     /// 但是工具类又是什么呢?
     /// 当然是工具了....
+    /// 数据载体
     /// </summary>
     public class TableModel<T>
     {

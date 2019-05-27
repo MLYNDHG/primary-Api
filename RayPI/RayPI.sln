@@ -5,17 +5,19 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RayPI", "RayPI\RayPI.csproj", "{C44EDA86-BC6B-48F8-BADB-67233078059C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RayPI.Model", "RayPI.Model\RayPI.Model.csproj", "{A1CB4DB4-68AB-44E6-A0E9-F8A06E31352B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RayPI.Model", "RayPI.Model\RayPI.Model.csproj", "{A1CB4DB4-68AB-44E6-A0E9-F8A06E31352B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlSugar", "SqlSugar\SqlSugar.csproj", "{F7A46006-522B-4F56-9F9E-53B0AC7BF6F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RayPI.Entity", "RayPI.Entity\RayPI.Entity.csproj", "{FCD1634D-A1A6-40B2-B5D5-A661698828BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RayPI.Entity", "RayPI.Entity\RayPI.Entity.csproj", "{FCD1634D-A1A6-40B2-B5D5-A661698828BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RayPI.IService", "RayPI.IService\RayPI.IService.csproj", "{4ABED370-3601-48FA-BD23-31DFB0EA3458}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RayPI.IService", "RayPI.IService\RayPI.IService.csproj", "{4ABED370-3601-48FA-BD23-31DFB0EA3458}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RayPI.Service", "RayPI.Service\RayPI.Service.csproj", "{9398B6C3-3F09-4107-90B1-4E3B9958EF2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RayPI.Service", "RayPI.Service\RayPI.Service.csproj", "{9398B6C3-3F09-4107-90B1-4E3B9958EF2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RayPI.Bussiness", "RayPI.Bussiness\RayPI.Bussiness.csproj", "{9D093DEE-D4DB-4C15-8A0A-7D911F87148C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RayPI.Bussiness", "RayPI.Bussiness\RayPI.Bussiness.csproj", "{9D093DEE-D4DB-4C15-8A0A-7D911F87148C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RayPI.Token", "RayPI.Token\RayPI.Token.csproj", "{F6A57DCF-3D6B-4F30-B41D-4D91B6F24426}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{9D093DEE-D4DB-4C15-8A0A-7D911F87148C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D093DEE-D4DB-4C15-8A0A-7D911F87148C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D093DEE-D4DB-4C15-8A0A-7D911F87148C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6A57DCF-3D6B-4F30-B41D-4D91B6F24426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6A57DCF-3D6B-4F30-B41D-4D91B6F24426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6A57DCF-3D6B-4F30-B41D-4D91B6F24426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6A57DCF-3D6B-4F30-B41D-4D91B6F24426}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

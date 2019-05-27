@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RayPI.Bussiness.Admin;
@@ -14,6 +15,7 @@ namespace RayPI.Controllers.Admin
     /// </summary>
     [Produces("application/json")]
     [Route("api/admin/[controller]")]
+    [Authorize(Policy= "Admin")]
     public class StudentController : Controller
     {
         private StudentBLL bll = new StudentBLL();

@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RayPI.Bussiness\RayPI.Bussiness.csproj" />
+    <ProjectReference Include="..\RayPI.Token\RayPI.Token.csproj" />
   </ItemGroup>
 
 </Project>
