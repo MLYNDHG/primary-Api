@@ -86,15 +86,31 @@ namespace RayPI
                 var cache = new MemoryCache(new MemoryCacheOptions());
                 return cache;
             });
-            #endregion
-
-            #region
             //认证
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("System", policy => policy.RequireClaim("SystemType").Build());
                 options.AddPolicy("Client", policy => policy.RequireClaim("ClientType").Build());
                 options.AddPolicy("Admin", policy => policy.RequireClaim("AdminType").Build());
+            });
+            #endregion
+
+            #region CORS跨域
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowAnyOrigin", policy =>
+                {
+                    policy.AllowAnyOrigin()//允许任何源
+                    .AllowAnyMethod()//允许任何方式
+                    .AllowAnyHeader()//允许任何头
+                    .AllowCredentials();//允许cookie
+                });
+                c.AddPolicy("AllowSpecificOrigin", policy =>
+                {
+                    policy.WithOrigins("http://localhost:9090")
+                    .WithMethods("GET", "POST", "PUT", "DELETE")
+                    .WithHeaders("authorization");
+                });
             });
             #endregion
         }
@@ -125,6 +141,8 @@ namespace RayPI
             #endregion
 
             app.UseMvc();
+
+            app.UseStaticFiles();//用于访问wwwroot下的文件 
         }
     }
 }

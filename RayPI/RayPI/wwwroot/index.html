@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../js/jQuery.js"></script>
+    <script>
+        function GetToken() {
+            var tokenModel = {
+                Uid: $("#tUid").val(),
+                Uname: $("#tUname").val(),
+                Phone: $("#tPhone").val(),
+                Icon: $("#tIcon").val(),
+                UNickname: $("#tUNickname").val(),
+                Sub: $("#tsub").val()
+            };
+            $.ajax({
+                url: "http://localhost:18583/api/Client/Token",
+                type: "post",
+                dataType: "json",
+                data: tokenModel,
+                async: false,
+                success: function (d) {
+                    alert(JSON.stringify(d));
+                    $("#jwt").val(d);
+                },
+                error: function (d) {
+                    alert(JSON.stringify(d));
+                    $("#jwt").val(JSON.stringify(d));
+                }
+            });
+        }
+        function GetStudent() {
+            var id = parseInt($("#sId").val());
+            $.ajax({
+                url: "http://localhost:18583/api/admin/Student/"+id,
+                type: "get",
+                async: false,
+                headers: { "Authorization": "Bearer " + $("#jwt").val().trim() },
+                success: function (d) {
+                    alert(JSON.stringify(d));
+                    $("#student").val(JSON.stringify(d));
+                },
+                error: function (d) {
+                    alert(JSON.stringify(d));
+                    $("#student").val(JSON.stringify(d));
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div style="width:350px; margin:100px auto 0;">
+        Uid:<input type="text" id="tUid" value="1" /><br />
+        Uname:<input type="text" id="tUname" value="1" /><br />
+        Phone :<input type="text" id="tPhone" value="1" /><br />
+        Icon:<input type="text" id="tIcon" value="1" /><br />
+        UNickname:<input type="text" id="tUNickname" value="1" /><br />
+        Sub :<input type="text" id="tsub" value="Admin" /><br />
+        <input type="button" value="获取Token" onclick="GetToken()" /><br />
+        <br />
+        <p>token:</p>
+        <textarea id="jwt" style="width:300px; height:200px; "></textarea>
+        <br />
+        学生ID：<input type="text" id="sId" value="1" /> <input type="button" value="点击查询" onclick="GetStudent()" />
+        <br />
+        <textarea id="student" style="width:300px;height:200px;"></textarea>
+    </div>
+</body>
+</html>
